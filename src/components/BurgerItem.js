@@ -4,10 +4,10 @@ const BurgerItem = (props) => {
   return (
     <div>
       <div className="BurgerItem">
-        { /* Name of Burger Here */ }
+        { props.burger.name }
       </div>
       <div className="BurgerBottomBun">
-        <button onClick={console.log}>Show</button>
+        <button id={props.burger.id} onClick={()=> {props.handleDisplayBurger(props.burger)}}>Show</button>
         <button onClick={console.log}>Delete</button>
       </div>
     </div>
